@@ -1,211 +1,107 @@
-.footer,
-#footer{
-    border-top: 1px solid $dgray;
-}
-
 .footer{
     background-color: $white;
-}
-
-.relatedsite{
-    max-width: 1410px;
-    margin: 0 35px 0 10px;
-    
-    @include mq('deskTop'){
-        margin: 0 78px 0 40px;
-    }
-}
-
-.relaslder{
-    .item{
-        a{
-            display: block;
-            margin: 0 15px;
-
-            img{
-                height: 44px;
-            }
-        }
-    }
-
-    @include mq('deskTop'){
-        .item{
-            a{
-                margin: 0 30px;
-
-                img{
-                    height: 62px;
-                }
-            }
-        }
-    }
+    border-top: 1px solid $gray4;
+    width: 100%;
 }
 
 #footer{
-    padding: 22px 0 30px;
+    @include screenInner($section-width);
+    position: relative;
+    padding: 25px 0 30px;
 
-    .inner{
-        position: relative;
+    h6{
+        display: none;
     }
 
-    .fmenu{
-        margin-bottom: 10px;
-
-        li{
-            @include disinBlock('m');
-            position: relative;
-            padding-right: 11px;
-            margin-right: 6px;
-
-            &::after{
-                @include posiCenter('v');
-                background-color: $dgray;
-                content: '';
-                display: block;
-                width: 1px;
-                height: 11px;
-                right: 0;
-            }
-
-            &:last-of-type::after{
-                display: none;
-            }
-
-            a{
-                @include fsm('16');
-                color: $black;
-            }
-        }
-    }
-
-    .finfo{
-        @include fsm('16');
-        color: $gray3;
-        margin-bottom: 15px;
-
+    .addr{
         p{
-            margin-bottom: 5px;
-
-            .addr{
-                margin-right: 10px;
-            }
-        }
-    }
-
-    .fsns{
-        margin-bottom: 15px;
-
-        ul{
-            @include disinBlock('m');
-            margin-right: 10px;
-
-            li{
-                @include disinBlock('m');
-                margin-right: 5px;
-
-                @for $sns from 1 through 5{
-
-                    &.sns_#{$sns}{
-                        span{
-                            background-image: url('/resources/images/icon/f_sns#{$sns}.png');
-                        }
-                    }
-                }
-
-                a{
-                    display: block;
-                    width: 30px;
-                    height: 30px;
-                    overflow: hidden;
-
-                    span{
-                        @include marginCenter();
-                        @include ir();
-                        display: block;
-                        width: 16px;
-                        height: 15px;
-                        margin-top: 7px;
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
-        }
-
-        .wamark{
-            @include disinBlock('m');
-
-            img{
-                width: 61px;
-            }
-        }
-    }
-
-    .familysite{
-
-        select{
-            color: $black;
+            @include fsm('16');
+            color: $gray;
             font-weight: 500;
+            line-height: 1.9;
+        }
+    }
+
+    .cs{
+        @include fsm('16');
+        color: $black;
+        border: 1px solid $igray;
+        margin-top: 12px;
+        padding: 12px;
+        font-weight: 500;
+        text-align: center;
+
+        .tel{
+            span, strong{
+                @include disinBlock('m');
+            }
+
+            span{
+                margin-right: 7px;
+            }
+
+            strong{
+                @include fsm('28');
+            }
         }
     }
 
     @include mq('deskTop'){
-        padding: 38px 0 40px;
+        padding: 48px 0 50px;
 
-        .fmenu{
-            margin-bottom: 25px;
+        h6{
+            display: block;
+            width: 172px;
 
-            li{
-                padding-right: 20px;
-                margin-right: 15px;
-
-                &::after{
-                    height: 14px;
-                }
+            img{
+                width: 100%;
             }
         }
 
-        .fsns{
+        .addr{
             position: absolute;
-            margin-bottom: 0;
-            top: -13px;
-            right: 0;
-
-            ul{
-                margin-right: 10px;
-
-                li{
-                    margin-right: 12px;
-
-                    a{
-                        display: block;
-                        width: 30px;
-                        height: 30px;
-                        overflow: hidden;
-
-                        span{
-                            width: 19px;
-                            height: 18px;
-                            margin-top: 7px;
-                        }
-                    }
-                }
-            }
-
-            .wamark{
-
-                img{
-                    width: 74px;
-                }
-            }
+            top: 56px;
+            left: 202px;
         }
 
-        .familysite{
+        .cs{
             position: absolute;
-            width: 215px;
-            top: 50px;
+            top: 39px;
             right: 0;
+            margin-top: 0;
         }
+    }
+
+    @include mq('deskTop-anoter'){
+        .cs{
+            width: 230px;
+            padding: 20px;
+        }
+    }
+}
+
+#btnTop{
+    @include fsm('15');
+    color: $white;
+    background-color: $black2;
+    position: fixed;
+    display: none;
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: 10px;
+    font-weight: 700;
+    overflow: hidden;
+
+    .isico{
+        @include marginCenter();
+    }
+
+    @include mq('deskTop'){
+        width: 65px;
+        height: 65px;
+        bottom: 0;
+        right: 30px;
     }
 }
 

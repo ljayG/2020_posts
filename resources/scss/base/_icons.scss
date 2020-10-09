@@ -2,8 +2,14 @@
     @include ir();
     display: block;
 
-    &.isi_bell{
-        @include bgicon(12, 13, 20, 21, '/resources/images/icon/bell.png');
+    &.isi_tel{
+        @include bgicon(22, 20, 26, 24, '../images/icon/tel.png');
+    }
+    &.isi_arrow{
+        @include bgicon(10, 6, 14, 8, '../images/icon/top_arrow.png');
+    }
+    &.isi_list{
+        @include bgicon(15, 15, 14, 14, '../images/icon/list.png');
     }
 
     @for $down from 1 through 6{
@@ -58,13 +64,7 @@
         @include bgicon(19, 12, 22, 14, '/resources/images/icon/view.png');
     }
 
-    &.isi_list{
-        @include bgicon(15, 15, 14, 14, '/resources/images/icon/list.png');
-    }
-
-    &.isi_arrow{
-        @include bgicon(10, 6, 14, 8, '/resources/images/icon/arrow.png');
-    }
+    
 
     &.isi_more{
         @include bgicon(14, 14, 21, 21, '/resources/images/icon/more.png');

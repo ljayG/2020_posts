@@ -8,73 +8,10 @@
 
 #contents{
     position: relative;
-    padding-top: 30px;
-
-    .etc_btn{
-        position: absolute;
-        top: 30px;
-        right: 20px;
-
-        .btn_rss, .btn_print, .btn_share{
-            border: 1px solid $dgray;
-            background-color: $white;
-            width: 36px;
-            height: 36px;
-
-            & > span{
-                @include marginCenter();
-                @include ir();
-                display: block;
-            }
-        }
-
-        .btn_share{
-            & > span{
-                @include bgicon(13, 14, 19, 20, '/resources/images/icon/share.png');
-            }
-        }
-
-        .btn_rss, .btn_print{
-            display: none;
-        }
-
-        @include mq('deskTop'){
-            top: 20px;
-            right: 40px;
-
-            .btn_rss, .btn_print, .btn_share{
-                width: 48px;
-                height: 48px;
-            }
-
-            .btn_rss{
-                display: inline-block;
-                margin-right: 6px;
-
-                & > span{
-                    width: 18px;
-                    height: 18px;
-                    background: url('/resources/images/icon/rss.png') no-repeat;
-                    background-size: contain;
-                }
-            }
-
-            .btn_print{
-                display: inline-block;
-                margin-right: 6px;
-
-                & > span{
-                    width: 20px;
-                    height: 18px;
-                    background: url('/resources/images/icon/print.png') no-repeat;
-                    background-size: contain;
-                }
-            }
-        }
-    }
+    padding-top: 105px;
 
     @include mq('deskTop'){
-        padding-top: 32px;
+        padding-top: 100px;
     }
 }
 

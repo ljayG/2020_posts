@@ -92,12 +92,13 @@
 }
 
 .btn1{
-    @include disinBlock('m');
-    @include fsm('18');
-    padding: 14px 35px;
+    @include fsm('20');
+    display: block;
+    height: 55px;
     text-align: center;
     font-weight: 500;
-    line-height: 1;
+    line-height: 51px;
+    border-radius: 8px;
 
     span{
         @include disinBlock('m');
@@ -108,7 +109,11 @@
     }
 
     @include mq('deskTop'){
-        padding: 19px 29px;
+        @include disinBlock('m');
+        min-width: 170px;
+        padding: 0 20px;
+        height: 65px;
+        line-height: 60px;
     }
 }
 
@@ -221,13 +226,11 @@
 .btnwhite{
     @include transition(0.25s);
     background-color: $white;
-    border: 1px solid $dgray;
+    border: 1px solid $black2;
     color: $black;
     
     @include mq('deskTop'){
-        &:hover{
-            background-color: $dgray;
-        }
+        border-width: 2px;
     }
 }
 .btnwhite2{
