@@ -1,0 +1,427 @@
+@mixin clearfix(){
+    &::after{
+        content:'';
+        display:block;
+        float:none;
+        clear:both;
+        height:0;
+        font-size:0;
+        line-height:0;
+        visibility:hidden;
+    }
+}
+
+@mixin screenInner($maxWidth) {
+    max-width: $maxWidth;
+    margin-left: 17px;
+    margin-right: 17px;
+
+    @include mq('deskTop') {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    @include mq('deskTop-anoter') {
+        @include marginCenter();
+    }
+}
+
+@mixin screenInner2($maxWidth) {
+    max-width: $maxWidth;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq('deskTop') {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    @include mq('deskTop-superWide') {
+        @include marginCenter();
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@mixin blind(){
+    position:absolute;
+    left:-9999px;
+    top:0;
+    height:0;
+    font-size:1px;
+    line-height:0;
+    @include ir;
+}
+
+@mixin ir(){
+    text-indent:-9999em;
+    overflow:hidden;
+}
+
+@mixin ir2(){
+    text-indent:9999em;
+    overflow:hidden;
+}
+
+@mixin disinBlock($va){
+    display: inline-block;
+
+    @if $va == 'm' {
+        vertical-align: middle;
+    } @else if $va == 't' {
+        vertical-align: top;
+    } @else if $va == 'b' {
+        vertical-align: bottom;
+    }
+}
+
+@mixin tableCell(){
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@mixin posiCenter($areaPosi) {
+    @if $areaPosi == 'va' {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $areaPosi == 'a' {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $areaPosi == 'v' {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin marginCenter(){
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin pad($posi, $num) {
+    @if $posi == 'top' {
+        .pdt#{$num}{
+            padding-top: $num+px;
+        }
+    } @else if $posi == 'btm'{
+        .pdb#{$num}{
+            padding-bottom: $num+px;
+        }
+    } @else if $posi == 'left'{
+        .pdl#{$num}{
+            padding-left: $num+px;
+        }
+    } @else if $posi == 'right'{
+        .pdr#{$num}{
+            padding-right: $num+px;
+        }
+    }
+}
+
+@mixin paddAll($padding) {
+    padding: ($padding/2)+px;
+    @include mq('deskTop') {
+        padding: $padding+px;
+    }
+}
+
+@mixin paddTop($padding) {
+    padding-top: ($padding/2)+px;
+    @include mq('deskTop') {
+        padding-top: $padding+px;
+    }
+}
+
+@mixin paddBtm($padding) {
+    padding-bottom: ($padding/2)+px;
+    @include mq('deskTop') {
+        padding-bottom: $padding+px;
+    }
+}
+
+@mixin paddLeft($padding) {
+    padding-left: ($padding/2)+px;
+    @include mq('deskTop') {
+        padding-left: $padding+px;
+    }
+}
+
+@mixin paddRight($padding) {
+    padding-right: ($padding/2)+px;
+    @include mq('deskTop') {
+        padding-right: $padding+px;
+    }
+}
+
+@mixin mg($posi, $num) {
+    @if $posi == 'top' {
+        .mgt#{$num}{
+            margin-top: $num+px;
+        }
+    } @else if $posi == 'btm'{
+        .mgb#{$num}{
+            margin-bottom: $num+px;
+        }
+    } @else if $posi == 'left'{
+        .mgl#{$num}{
+            margin-left: $num+px;
+        }
+    } @else if $posi == 'right'{
+        .mgr#{$num}{
+            margin-right: $num+px;
+        }
+    }
+}
+
+@mixin marTop($margin) {
+    margin-top: ($margin/2)+px;
+    @include mq('deskTop') {
+        margin-top: $margin+px;
+    }
+}
+
+@mixin marBtm($margin) {
+    margin-bottom: ($margin/2)+px;
+    @include mq('deskTop') {
+        margin-bottom: $margin+px;
+    }
+}
+
+@mixin marLeft($margin) {
+    margin-left: ($margin/2)+px;
+    @include mq('deskTop') {
+        margin-left: $margin+px;
+    }
+}
+
+@mixin marRight($margin) {
+    margin-right: ($margin/2)+px;
+    @include mq('deskTop') {
+        margin-right: $margin+px;
+    }
+}
+
+@mixin widImport($view, $width) {
+
+    @if $view == 'desk'{
+        @include mq('deskTop'){
+            .widimport_desk#{$width}{
+                width: $width+px !important;
+            }
+        }
+    }
+}
+
+@mixin transition($time) {
+    transition: all $time ease-in-out;
+}
+
+@mixin bgicon($mwid, $mhei, $dwid, $dhei, $bgurl) {
+    width: $mwid+px;
+    height: $mhei+px;
+    background-image: url($bgurl);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mq('deskTop'){
+        width: $dwid+px;
+        height: $dhei+px;
+    }
+}
+
+@mixin textOverflow() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin allMenuFs($depth) {
+    @if $depth == '1' {
+        color: $black;
+        font-size: 1.25rem;
+        font-weight: 700;
+        @include mq('deskTop'){
+            color: $white;
+            font-size: 2rem;
+        }
+    } @else if $depth == '2'{
+        color: $black;
+        font-size: 1rem;
+        font-weight: 500;
+        @include mq('deskTop'){
+            color: $white;
+        }
+    } @else if $depth == '3'{
+        font-size: 0.875rem;
+        @include mq('deskTop'){
+            color: $skyBlue;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@mixin fsm($size){
+    @if $size == 'bigTitle' {
+        font-size: 1.875rem;
+        @include mq('deskTop'){
+            font-size: 3.125rem;
+        }
+    } @else if $size == 'midTitle' {
+        font-size: 1.375rem;
+        @include mq('deskTop'){
+            font-size: 2.5rem;
+        }
+    } @else if $size == 'viewTitle' {
+        font-size: 1.25rem;
+        @include mq('deskTop'){
+            font-size: 2em;
+        }
+    } @else if $size == 'sectorTitle' {
+        font-size: 1.125rem;
+        @include mq('deskTop'){
+            font-size: 2.125em;
+        }
+    } @else if $size == 'title' {
+        font-size: 1rem;
+        @include mq('deskTop'){
+            font-size: 1.125rem;
+        }
+    } @else if $size == 'location' {
+        font-size: 0.813rem;
+        @include mq('deskTop'){
+            font-size: 0.938rem;
+        }
+    } @else if $size == 'gnb' {
+        font-size: 1.125rem;
+        font-weight: 500;
+        @include mq('deskTop'){
+            font-size: 1.5rem;
+        }
+        @include mq('deskTop-wide'){
+            font-size: 1.125rem;
+        }
+    } @else if $size == '14' {
+        font-size: 0.688rem;
+        @include mq('deskTop'){
+            font-size: 0.875rem;
+        }
+    } @else if $size == '15' {
+        font-size: 0.688rem;
+        @include mq('deskTop'){
+            font-size: 0.938rem;
+        }
+    } @else if $size == '16' {
+        font-size: 0.813rem;
+        @include mq('deskTop'){
+            font-size: 1rem;
+        }
+    } @else if $size == '18' {
+        font-size: 0.938rem;
+        @include mq('deskTop'){
+            font-size: 1.125rem;
+        }
+    } @else if $size == '20' {
+        font-size: 1rem;
+        @include mq('deskTop'){
+            font-size: 1.25rem;
+        }
+    } @else if $size == '22' {
+        font-size: 1rem;
+        @include mq('deskTop'){
+            font-size: 1.375rem;
+        }
+    } @else if $size == '28' {
+        font-size: 1.125rem;
+        @include mq('deskTop'){
+            font-size: 1.75rem;
+        }
+    } @else if $size == '34' {
+        font-size: 1.125rem;
+        @include mq('deskTop'){
+            font-size: 2.125em;
+        }
+    } @else if $size == '40' {
+        font-size: 1.375rem;
+        @include mq('deskTop'){
+            font-size: 2.5rem;
+        }
+    } @else if $size == '60' {
+        font-size: 1.875rem;
+        @include mq('deskTop'){
+            font-size: 3.75rem;
+        }
+    } @else if $size == '80' {
+        font-size: 3rem;
+        @include mq('deskTop'){
+            font-size: 5rem;
+        }
+    }
+}
+
+@mixin col($n) {
+    width: (100%/$n);
+}
+
+@mixin tableCol($colWidth) {
+    .colt#{$colWidth}{
+        width: ($colWidth/1410)*100%;
+    }
+}
+
+@mixin formindent {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@mixin mq($screen-width) {
+    @if $screen-width == 'deskTop-superWide' {
+        @media screen and (min-width: 1300px) {
+            @content;
+        }
+    } @else if $screen-width == 'deskTop-anoter' {
+        @media screen and (min-width: 1260px) {
+            @content;
+        }
+    } @else if $screen-width == 'deskTop' {
+        @media screen and (min-width: 1024px) {
+            @content;
+        }
+    } @else if $screen-width == 'tablet' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $screen-width == 'tabletLte' {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    } @else if $screen-width == 'mobile-anoter' {
+        @media screen and (min-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile-small' {
+        @media screen and (max-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile' {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyTablet' {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+}

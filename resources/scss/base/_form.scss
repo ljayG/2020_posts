@@ -1,0 +1,725 @@
+.bbs_search{
+    @include clearfix();
+    margin-bottom: 15px;
+
+    .total{
+        @include fsm('18');
+        color: $black;
+        margin-bottom: 8px;
+
+        strong{
+            color: $color-primary;
+        }
+    }
+
+    @include mq('deskTop'){
+        margin-bottom: 20px;
+
+        .total{
+            float: left;
+            padding-top: 15px;
+        }
+
+        .bbsinput_wrap, .bbselect_wrap{
+            float: right;
+        }
+    }
+}
+
+.selectbox{
+    position: relative;
+
+    &::after{
+        @include posiCenter('v');
+        @include bgicon(10, 5, 12, 6, '/resources/images/common/arrow03.png');
+        content: '';
+        display: block;
+        right: 10px;
+    }
+
+    select{
+        @include transition(0.25s);
+        @include fsm('18');
+        color: $black;
+        border: 1px solid $dgray;
+        background-color: $white;
+        width: 100%;
+        height: 39px;
+        padding: 0 20px 0 10px;
+        line-height: 38px;
+        font-weight: 500;
+
+        &:disabled{
+            color: $color-default;
+            background-color: $bggray;
+        }
+
+        @include mq('deskTop'){
+            height: 45px;
+            line-height: 44px;
+
+            &:focus{
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        &.maxwid1{
+            max-width: 540px;
+        }
+        &.maxwid2{
+            max-width: 265px;
+        }
+    }
+}
+
+.inputbox{
+    position: relative;
+
+    input{
+        @include transition(0.25s);
+        @include fsm('18');
+        color: $black;
+        background-color: $white;
+        border: 1px solid $dgray;
+        width: 100%;
+        height: 39px;
+        padding: 0 10px;
+        line-height: 38px;
+
+        &:disabled{
+            color: $color-default;
+            background-color: $bggray;
+        }
+
+        @include mq('deskTop'){
+            height: 45px;
+            line-height: 44px;
+
+            &:focus{
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        &.maxwid1{
+            max-width: 540px;
+        }
+        &.maxwid2{
+            max-width: 265px;
+        }
+        &.maxwid2-2{
+            max-width: calc(100% - 282px);
+        }
+    }
+}
+
+.textareabox{
+    position: relative;
+
+    textarea{
+        @include transition(0.25s);
+        @include fsm('18');
+        color: $black;
+        background-color: $white;
+        border: 1px solid $dgray;
+        width: 100%;
+        padding: 10px;
+
+        @include mq('deskTop'){
+            padding: 15px;
+
+            &:focus{
+                border-color: $color-primary;
+            }
+        }
+    }
+}
+
+.radiobox{
+    position: relative;
+
+    input[type="radio"]{
+        @include formindent();
+
+        // &:focus+label:before{
+        //     outline: 1px solid $color-primary;
+        // }
+
+        & + label{
+            @include disinBlock('m');
+            @include fsm('16');
+            color: $black;
+            position: relative;
+            min-height: 22px;
+            line-height: 1;
+            cursor: pointer;
+
+            &:before{
+                @include disinBlock('m');
+                @include transition(0.3s);
+                background-color: $white;
+                border: 1px solid $dgray;
+                content: '';
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin: -1px 9px 0 0;
+                text-align: center;
+                border-radius: 50%;
+                box-sizing: border-box;
+                z-index: 2;
+            }
+        }
+
+        &:checked + label:before{
+            border-color: $color-primary;
+        }
+
+        &:checked + label:after{
+            @include disinBlock('m');
+            background-color: $color-primary;
+            content:"";
+            position: absolute;
+            width: 10px;
+            height:10px;
+            left: 0;
+            top: 50%;
+            margin: -7px 0 0 5px;
+            border-radius:50%;
+            animation-name: scalein;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            z-index: 1;
+        }
+    }
+
+    @include mq('deskTop'){
+        input[type="radio"]{
+            & + label{
+                min-height: 26px;
+
+                &:before{
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    margin: -1px 9px 0 0;
+                }
+            }
+
+            &:checked + label:after{
+                width: 14px;
+                height:14px;
+                margin: -9px 0 0 5px;
+            }
+        }
+    }
+}
+
+.bbsinput_wrap{
+    @include clearfix();
+
+    .selectbox{
+        float: left;
+        width: (180/670)*100%;
+    }
+
+    .bbsinp{
+        position: relative;
+        float: left;
+        width: (380/670)*100%;
+
+        input[type='text']{
+            @include fsm('16');
+            border: 1px solid $dgray;
+            width: 100%;
+            height: 39px;
+            padding: 0 10px;
+            line-height: 38px;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    .bbsbtn{
+        float: right;
+        width: (110/670)*100%;
+    }
+
+    &.mode2{
+        .bbsinp{
+            width: (560/670)*100%;
+
+            input[type='text']{
+                border-left: 1px solid $dgray;
+            }
+        }
+    }
+
+    &.mode4{
+        &.col-2{
+            .selectbox{
+                width: (280/670)*100%;
+
+                & + .selectbox{
+
+                    select{
+                        border-left: none;
+                    }
+                }
+            }
+        }
+
+        &.col-3{
+            .selectbox{
+                width: (186/670)*100%;
+
+                & + .selectbox{
+                    width: (187/670)*100%;
+
+                    select{
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        .selectbox{
+            width: 150px;
+        }
+
+        .bbsinp{
+            width: 379px;
+
+            input[type='text']{
+                height: 45px;
+                line-height: 44px;
+            }
+        }
+
+        .bbsbtn{
+            width: 69px;
+        }
+
+        &.mode2{
+            .bbsinp{
+                width: 379px;
+            }
+        }
+
+        &.mode3{
+            @include marginCenter();
+            width: 598px;
+        }
+
+        &.mode4{
+            &.col-2{
+                .selectbox{
+                    width: 150px;
+
+                    & + .selectbox{
+                        width: 150px;
+                    }
+                }
+            }
+
+            &.col-3{
+                .selectbox{
+                    width: 150px;
+
+                    & + .selectbox{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn_srch{
+    @include fsm('16');
+    border: 1px solid $black2;
+    background-color: $black2;
+    color: $white;
+    display: block;
+    width: 100%;
+    height: 39px;
+
+    @include mq('deskTop'){
+        @include transition(0.25s);
+        height: 45px;
+
+        &:hover{
+            border-color: #2d2f31;
+            background-color: #2d2f31;
+        }
+    }
+}
+
+.bbselect_wrap{
+    @include clearfix();
+
+    .bbslabel{
+        @include fsm('16');
+        color: $black;
+        font-weight: 500;
+    }
+
+    .selarea{
+        .selectbox{
+            width: 100%;
+            padding-right: 5px;
+        }
+    }
+
+    @include mq('onlyMobile'){
+        width: 100%;
+        display: flex;
+
+        .bbslabel{
+            padding: 11px 5px 0 0;
+            text-align: right;
+        }
+
+        .fgrow1{
+            flex-grow: 1;
+        }
+        .fgrow2{
+            flex-grow: 2;
+        }
+        .fgrow3{
+            flex-grow: 3;
+        }
+        .fgrow4{
+            flex-grow: 4;
+        }
+
+        .bbsbtn{
+            flex-shrink: 0;
+            width: 55px;
+        }
+    }
+    
+
+    @include mq('tablet'){
+        float: right;
+        display: block;
+
+        .bbslabel{
+            @include disinBlock('m');
+            padding-right: 8px;
+        }
+
+        .selarea{
+            @include disinBlock('m');
+            width: auto;
+
+            .selectbox{
+                width: 150px;
+            }
+        }
+
+        .bbsbtn{
+            @include disinBlock('m');
+            width: 70px;
+        }
+    }
+}
+
+.frmwrap{
+    border-top: 1px solid $lgray;
+
+    &.bortmode{
+        border-top: 2px solid $black;
+    }
+
+    .frmdl{
+        padding: 18px 0 20px;
+        border-bottom: 1px solid $lgray;
+
+        & > dt{
+            @include fsm('16');
+            color: $black;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+    }
+
+    .btnr{
+        margin-top: 5px;
+        text-align: right;
+
+        .btnunder{
+            span{
+                @include fsm('16');
+                color: $color-primary;
+                border-bottom: 1px solid $color-primary;
+                display: inline-block;
+                padding-bottom: 1px;
+                font-weight: 500;
+
+            }
+        }
+    }
+
+    .divide2{
+        display: flex;
+        justify-content: space-between;
+
+        & > div{
+            width: (325/670)*100%;
+        }
+    }
+
+    .frm_otxt1{
+        @include fsm('18');
+        font-weight: 500;
+    }
+
+    .infotxt{
+        @include fsm('16');
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    @include mq('deskTop'){
+        &.bortmode{
+            border-top-width: 4px;
+        }
+
+        .frmdl{
+            @include clearfix();
+            padding: 0;
+
+            & > dt{
+                float: left;
+                width: 160px;
+                padding: 18px 0 18px 15px;
+            }
+
+            & > dd{
+                float: right;
+                width: calc(100% - 165px);
+                padding: 10px 20px 10px 0;
+            }
+        }
+
+        .divide2{
+            @include disinBlock('m');
+            justify-content: initial;
+
+            &.deskwid1{
+                width: 550px;
+            }
+            &.deskwid2{
+                width: 100%;
+            }
+
+            & > div{
+                @include disinBlock('m');
+                width: 100%;
+                margin-right: 6px;
+            }
+        }
+
+        .frm_otxt1{
+            @include disinBlock('m');
+            padding-top: 10px;
+        }
+
+        .infotxt{
+            @include disinBlock('m');
+        }
+    }
+}
+
+.phonewrap{
+
+    .numberposition{
+        display: flex;
+    }
+
+    .selectbox{
+        @include col(3);
+    }
+
+    .inputbox{
+        @include col(3);
+        padding-left: 12px;
+        margin-left: 6px;
+        &::before{
+            @include posiCenter('v');
+            content: '-';
+            display: block;
+            left: 0;
+        }
+    }
+
+    .authentic_btn{
+        margin-top: 10px;
+    }
+
+    &.mode2{
+        .authnumber{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            button{
+                width: 24%;
+            }
+        }
+        .inputbox.authnum{
+            width: 50%;
+            padding-left: 0;
+            margin: 0 0;
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        display: flex;
+        justify-content: space-between;
+
+        .authentic_btn{
+            margin: 0 0 0 10px;
+        }
+
+        &.mode2{
+            justify-content: flex-start;
+
+            .selectbox, .inputbox{
+                height: 45px;
+            }
+
+            .authnumber{
+                justify-content: flex-start;
+                margin: 0 0 0 10px;
+
+                button{
+                    margin-left: 10px;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+            .inputbox.authnum{
+                width: 65%;
+            }
+        }
+    }
+}
+
+.mailwrap{
+    .mailposition{
+        display: flex;
+    }
+
+    .selectbox, .inputbox{
+        @include col(3);
+    }
+
+    .inputbox.domain{
+        padding-left: 18px;
+        margin-left: 6px;
+        &::before{
+            @include posiCenter('v');
+            content: '@';
+            display: block;
+            left: 0;
+        }
+    }
+
+    .selectbox{
+        margin-left: 10px;
+    }
+
+    @include mq('deskTop'){
+        .inputbox{
+            width: 300px;
+            height: 45px;
+        }
+        .selectbox{
+            width: 350px;
+            height: 45px;
+        }
+    }
+}
+
+.titposition{
+    position: relative;
+
+    .rightxt{
+        @include fsm('16');
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    @include mq('deskTop'){
+        .rightxt{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.essential{
+    @include disinBlock('m');
+    position: relative;
+    padding-right: 8px;
+
+    &::after{
+        @include posiCenter('v');
+        @include fsm('16');
+        color: $color-primary;
+        content: '*';
+        right: 0;
+        font-weight: 500;
+    }
+}
+
+.agrwrap{
+    border-bottom: 1px solid $lgray;
+    position: relative;
+    padding: 18px 10px;
+
+    .argtxt{
+        @include fsm('18');
+        color: $black;
+        font-weight: 700;
+    }
+
+    .chkfrm_space{
+        margin-top: 10px;
+
+        & > div{
+            @include disinBlock('m');
+
+            & + div{
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        padding: 22px 24px;
+
+        .argtxt{
+            padding-right: 200px;
+        }
+
+        .chkfrm_space{
+            @include posiCenter('v');
+            right: 0;
+            margin-top: 0;
+        }
+    }
+}

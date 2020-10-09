@@ -1,0 +1,278 @@
+.btnwrap{
+    @include clearfix();
+
+    .center{
+        text-align: center;
+    }
+
+    &.topbord{
+        @include marTop(50);
+        border-top: 2px solid $lgray;
+        padding-top: 20px;
+    }
+
+    @include mq('onlyMobile'){
+        .center{
+            &.btndouble{
+                .btn1{
+                    float: left;
+                    width: (325/670)*100%;
+                }
+
+                .btn1:last-child{
+                    float: right;
+                }
+            }
+            &.btntriple{
+                .btn1{
+                    float: left;
+                    width: 31%;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:nth-child(2){
+                        margin-left: 3.5%;
+                        margin-right: 3.5%;
+                    }
+
+                    &:last-child{
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('tabletLte'){
+        .btns_left{
+            a + a{
+                margin-top: 10px;
+            }
+        }
+        
+        .btns_right{
+            a + a{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @include mq('tablet'){
+        .center{
+            &.btndouble{
+                .btn1 + .btn1{
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    
+    @include mq('deskTop'){
+        &.topbord{
+            border-top-width: 4px;
+            padding-top: 30px;
+        }
+
+        .btns_left{
+            float: left;
+
+            a + a{
+                margin-left: 6px;
+            }
+        }
+
+        .btns_right{
+            float: right;
+
+            a + a{
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.btn1{
+    @include disinBlock('m');
+    @include fsm('18');
+    padding: 14px 35px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+
+    span{
+        @include disinBlock('m');
+
+        & + span{
+            margin-left: 8px;
+        }
+    }
+
+    @include mq('deskTop'){
+        padding: 19px 29px;
+    }
+}
+
+.btn2{
+    @include fsm('18');
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    font-weight: 500;
+
+    span{
+        @include disinBlock('m');
+
+        & + span{
+            margin-left: 8px;
+        }
+    }
+
+    &.mode2{
+        @include fsm('16');
+    }
+
+    @include mq('deskTop'){
+        display: inline-block;
+        width: auto;
+        padding: 15px 29px;
+
+        &.mode2{
+            padding: 8px 29px;
+        }
+    }
+}
+
+.btn3{
+    @include fsm('16');
+    display: block;
+    width: 100%;
+    padding: 11px 15px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+
+    span{
+        @include disinBlock('m');
+
+        & + span{
+            margin-left: 8px;
+        }
+    }
+
+    &.btmg1{
+        margin-top: 15px;
+    }
+
+    @include mq('deskTop'){
+        @include disinBlock('m');
+        width: auto;
+        padding: 13px 28px;
+
+        &.btmg1{
+            margin: 0 0 0 24px;
+        }
+    }
+}
+
+.btn4{
+    @include disinBlock('m');
+    @include fsm('16');
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+
+    span{
+        @include disinBlock('m');
+
+        & + span{
+            margin-left: 8px;
+        }
+    }
+}
+
+.btnprimary{
+    @include transition(0.25s);
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: $white;
+    
+    @include mq('deskTop'){
+        &:hover{
+            background-color: #003e89;
+            border-color: #003e89;
+        }
+    }
+}
+.btnblack{
+    @include transition(0.25s);
+    background-color: $black2;
+    border: 1px solid $black2;
+    color: $white;
+    
+    @include mq('deskTop'){
+        &:hover{
+            background-color: #2d2f31;
+            border-color: #2d2f31;
+        }
+    }
+}
+.btnwhite{
+    @include transition(0.25s);
+    background-color: $white;
+    border: 1px solid $dgray;
+    color: $black;
+    
+    @include mq('deskTop'){
+        &:hover{
+            background-color: $dgray;
+        }
+    }
+}
+.btnwhite2{
+    @include transition(0.25s);
+    background-color: $white;
+    border: 1px solid $color-default;
+    color: $black;
+    
+    @include mq('deskTop'){
+        &:hover{
+            background-color: $color-default;
+            color: $white;
+        }
+    }
+}
+.btnnavy{
+    @include transition(0.25s);
+    background-color: $navy;
+    border: 1px solid $navy;
+    color: $white;
+    
+    @include mq('deskTop'){
+        &:hover{
+            background-color: #4a5d78;
+            border-color: #4a5d78;
+        }
+    }
+}
+
+.btn_more{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    .isico{
+        margin-left: auto;
+    }
+
+    @include mq('deskTop'){
+        width: 21px;
+        height: 21px;
+
+        .isico{
+            @include marginCenter();
+        }
+    }
+}

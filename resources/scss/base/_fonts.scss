@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('/resources/fonts/notokr-regular.eot');
+    src: url('/resources/fonts/notokr-regular.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/notokr-regular.woff2') format('woff2'),
+        url('/resources/fonts/notokr-regular.woff') format('woff'),
+        url('/resources/fonts/notokr-regular.ttf') format('truetype'),
+        url('/resources/fonts/notokr-regular.svg#notokr-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('/resources/fonts/notokr-medium.eot');
+    src: url('/resources/fonts/notokr-medium.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/notokr-medium.woff2') format('woff2'),
+        url('/resources/fonts/notokr-medium.woff') format('woff'),
+        url('/resources/fonts/notokr-medium.ttf') format('truetype'),
+        url('/resources/fonts/notokr-medium.svg#notokr-medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('/resources/fonts/notokr-bold.eot');
+    src: url('/resources/fonts/notokr-bold.eot?#iefix') format('embedded-opentype'),
+        url('/resources/fonts/notokr-bold.woff2') format('woff2'),
+        url('/resources/fonts/notokr-bold.woff') format('woff'),
+        url('/resources/fonts/notokr-bold.ttf') format('truetype'),
+        url('/resources/fonts/notokr-bold.svg#notokr-bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$fontFamily: 'Noto Sans KR',sans-serif;
+
+.ftc_default{
+    color: $color-default;
+}
+.ftc_primary{
+    color: $color-primary;
+}
+.ftc_black{
+    color: $black;
+}
+.ftc_white{
+    color: $white;
+}
+.ftc_gray3{
+    color: $gray3 !important;
+}
+.ftc_red{
+    color: $red;
+}
+.ftc_blue3{
+    color: $blue3;
+}
+.fsm14{
+    @include fsm('14');
+}
+.fsm15{
+    @include fsm('15');
+}
+.fsm16{
+    @include fsm('16');
+}
+.fsm18{
+    @include fsm('18');
+}
+.fsm22{
+    @include fsm('22');
+}
+.fsm28{
+    @include fsm('28');
+}
+
+.fw400{
+    font-weight: 400 !important;
+}
+
+.fw500{
+    font-weight: 500;
+}
+
+.fw700{
+    font-weight: 700;
+}
+
+.taleft{
+    text-align: left;
+}
+.tacenter{
+    text-align: center;
+}
+.taright{
+    text-align: right;
+}
+
+.txtover{
+    @include textOverflow();
+}
+.txtunder{
+    text-decoration: underline;
+}
+
+.txt1{
+    @include fsm('18');
+    color: $black;
+}
+.txt2{
+    @include fsm('16');
+}
+.brdtxt1{
+    @include marTop(30);
+    @include fsm('16');
+    border-top: 2px solid $lgray;
+    padding-top: 10px;
+}
+
+@include mq('deskTop'){
+    .tacenter_d{
+        text-align: center;
+    }
+
+    .brdtxt1{
+        border-top-width: 4px;
+        padding-top: 16px;
+    }
+}

@@ -1,0 +1,318 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;/*vertical-align:baseline;*/ box-sizing:border-box; word-break: keep-all;}
+
+body, th, td, input, select, textarea, button{font-size: 100%; font-family: $fontFamily; color:$color-default; line-height: 1.5; font-weight:400; letter-spacing: -0.5px;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{display: block}
+
+body{-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size: 1rem; font-weight: 700}
+ol, ul, li ,dl, dt, dd{list-style:none outside none; padding:0; margin:0}
+hr{display:none}
+span{margin:0; padding:0; outline:0}
+fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr{border:0}
+address, caption, cite, code, dfn, em, strong, th, var{font-style: normal}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after, q:before, q:after{content: ''; content: none}
+table{width: 100%; border-collapse:separate; border-spacing:0;}
+img{vertical-align:middle}
+a{color: $color-default; text-decoration:none; cursor:pointer}
+a:active, a:hover{text-decoration: none}
+input, select, label{vertical-align:middle}
+input, select, textarea, button{font-size: 1rem; vertical-align: middle; padding: 0; margin: 0}
+input, textarea{font-family: $fontFamily; /*border-radius: 0; appearance:none; -webkit-appearance:none;*/}
+button,input[type='text'],input[type='password'],input[type='tel'],input[type='num'],input[type='button'],input[type='submit'],input[type='reset'],input[type='file']{-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
+textarea{resize:none; box-sizing:border-box}
+button{border: 0 none; background-color: transparent; cursor: pointer; vertical-align: middle}
+b, strong{font-weight:700}
+input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"], input[type="search"]{box-sizing: border-box}
+select{position:relative; display: block; border: 0 none; -webkit-appearance:none; -moz-appearance:none;-o-appearance:none; appearance:none; box-sizing: border-box; padding-left: 3px; background-color: transparent;}
+select::-ms-expand {display: none}
+select option{border: 0 none}
+sub{vertical-align: baseline; font-size: 0.875rem;}
+strong sub{font-weight: 700;}
+
+/* ie Control */
+input::-ms-clear {display:none}
+
+::-webkit-input-placeholder { /* Edge */
+  color: $gray2;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $gray2;
+}
+
+::placeholder {
+  color: $gray2;
+}
+
+/* SkipNavigation */
+#skipNavigation{
+    width:100%;
+	position:absolute;
+	top:-200px;
+	left:0;
+	margin:0 auto;
+	z-index:9999;
+
+    a{
+        color:$white;
+        display:block;
+        height:35px;
+        background-color: $color-primary;
+        text-align:center;
+
+        &:active, &:focus{
+            width:100%;
+            color:$white;
+            position:absolute;
+            left:0;
+            top:200px;
+            background: $color-primary;
+            line-height:35px;
+            text-align:center;
+            border-bottom:1px solid #dbdbdb;
+        }
+    }
+}
+
+caption{
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+legend, .blind{
+    @include blind;
+}
+
+.clearfix{
+    @include clearfix();
+}
+
+.posrel{
+    position: relative;
+}
+
+.bggray{
+    background-color: $bggray;
+}
+
+.bgprimary{
+    background-color: $color-primary;
+}
+.bgblue3{
+    background-color: $blue3;
+}
+.bgred{
+    background-color: $red;
+}
+.bgyellow{
+    background-color: $yellow;
+}
+.bgskyblue{
+    background-color: $skyBlue;
+}
+.bggreen{
+    background-color: $green;
+}
+.bgorange{
+    background-color: $orange;
+}
+.bgnavy2{
+    background-color: $navy2;
+}
+.borderall{
+    border: 1px solid $lgray;
+}
+
+.wid100{
+    width: 100%;
+}
+
+img.maxw100{
+    max-width: 100%;
+}
+
+@include widImport(desk, 380);
+
+.mgcenter{
+    @include marginCenter();
+}
+@include mg(top, 5);
+@include mg(top, 10);
+@include mg(top, 30);
+@include mg(btm, 3);
+@include mg(btm, 5);
+@include mg(btm, 10);
+@include mg(btm, 20);
+@include mg(left, 5);
+@include mg(left, 10);
+
+.mgmt10{
+    margin-top: 5px;
+}
+.mgmt15{
+    margin-top: 8px;
+}
+.mgmt20{
+    margin-top: 10px;
+}
+.mgmt25{
+    margin-top: 13px;
+}
+.mgmt30{
+    margin-top: 15px;
+}
+.mgmt50{
+    margin-top: 25px;
+}
+.mgmb10{
+    margin-bottom: 5px;
+}
+.mgmb15{
+    margin-bottom: 8px;
+}
+.mgmb20{
+    margin-bottom: 10px;
+}
+.mgmb25{
+    margin-bottom: 13px;
+}
+.mgmb30{
+    margin-bottom: 15px;
+}
+.mgmb35{
+    margin-bottom: 18px;
+}
+.mgmb40{
+    margin-bottom: 20px;
+}
+.mgmb50{
+    margin-bottom: 25px;
+}
+.mgmb55{
+    margin-bottom: 28px;
+}
+.mgmb60{
+    margin-bottom: 30px;
+}
+.mgmb70{
+    margin-bottom: 35px;
+}
+.mgmb100{
+    margin-bottom: 50px;
+}
+.mgmb130{
+    margin-bottom: 65px;
+}
+
+@include mq('tabletLte'){
+    .mgbom10{
+        margin-bottom: 10px;
+    }
+}
+
+@include mq('deskTop'){
+    .mgmt10{
+        margin-top: 10px;
+    }
+    .mgmt15{
+        margin-top: 15px;
+    }
+    .mgmt20{
+        margin-top: 20px;
+    }
+    .mgmt25{
+       margin-top: 25px;
+    }
+    .mgmt30{
+        margin-top: 30px;
+    }
+    .mgmt50{
+        margin-top: 50px;
+    }
+    .mgmb10{
+        margin-bottom: 10px;
+    }
+    .mgmb15{
+        margin-bottom: 15px;
+    }
+    .mgmb20{
+        margin-bottom: 20px;
+    }
+    .mgmb25{
+        margin-bottom: 25px;
+    }
+    .mgmb30{
+        margin-bottom: 30px;
+    }
+    .mgmb35{
+        margin-bottom: 35px;
+    }
+    .mgmb40{
+        margin-bottom: 40px;
+    }
+    .mgmb50{
+        margin-bottom: 50px;
+    }
+    .mgmb55{
+        margin-bottom: 55px;
+    }
+    .mgmb60{
+        margin-bottom: 60px;
+    }
+    .mgmb70{
+        margin-bottom: 70px;
+    }
+    .mgmb100{
+        margin-bottom: 100px;
+    }
+    .mgmb130{
+        margin-bottom: 130px;
+    }
+    .mgodb20{
+        margin-bottom: 20px;
+    }
+    .mgodb30{
+        margin-bottom: 30px;
+    }
+}
+
+.imgdesk, .imgtablet{
+    display: none;
+}
+
+@include mq('tablet'){
+    .imgmobile_only{
+        display: none;
+    }
+    .imgtablet{
+        display: inline;
+    }
+}
+
+@include mq('deskTop'){
+    .imgmobile{
+        display: none;
+    }
+
+    .imgdesk{
+        display: inline;
+    }
+
+    .dbr{
+        display: block;
+    }
+}
+
+@include mq('onlyMobile'){
+    .mgot5{
+        margin-top: 5px;
+    }
+}

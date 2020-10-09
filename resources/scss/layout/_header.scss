@@ -1,0 +1,50 @@
+.header{
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $white;
+    
+    @include mq('deskTop'){
+        height: 100px;
+    }
+}
+
+#header{
+    position: relative;
+    height: 55px;
+
+    h1{
+        @include marginCenter();
+        width: 135px;
+        height: 100%;
+
+        a{
+            @include ir();
+            display: block;
+            height: 100%;
+            background-image: url('../images/common/logo.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    @include mq('deskTop'){
+        position: relative;
+        height: 100px;
+        margin: 0 30px;
+
+        h1{
+            width: 222px;
+            margin: 0;
+        }
+    }
+
+    @include mq('deskTop-superWide'){
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}

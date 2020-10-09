@@ -1,0 +1,107 @@
+.gnb{
+    height: 50px;
+
+    @include mq('deskTop'){
+        position: absolute;
+        height: 100px;
+        top: 0;
+        right: 30px;
+    }
+
+    @include mq('deskTop-anoter'){
+        @include posiCenter('a');
+        right: auto;
+    }
+}
+
+#gnb{
+    height: 50px;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: center;
+    
+    .dep1{
+        @include disinBlock('t');
+        height: 100%;
+        margin-right: 15px;
+
+        & > a{
+            @include fsm('gnb');
+            color: $black;
+            display: block;
+            height: 100%;
+
+            span{
+                @include disinBlock('m');
+                position: relative;
+                height: 100%;
+                letter-spacing: -1.5px;
+                line-height: 48px;
+
+                &::after{
+                    background-color: $color-primary;
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: 2px;
+                }
+            }
+        }
+
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        &.current{
+            & > a{
+                color: $color-primary;
+                font-weight: 700;
+
+                span{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        height: 100%;
+        padding-left: 0;
+        overflow: hidden;
+
+        .dep1{
+            margin-right: 0;
+            padding: 34px 25px;
+
+            & > a{
+                @include transition(0.3s);
+
+                span{
+                    line-height: 1;
+
+                    &::after{
+                        @include transition(0.3s);
+                        width: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &:hover{
+                    color: $color-primary;
+
+                    span{
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

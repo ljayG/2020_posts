@@ -1,0 +1,243 @@
+.popwrap{
+    display: none;
+    position: relative;
+
+    .popclose{
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 32px;
+        top: 11px;
+        right: 11px;
+
+        span{
+            @include marginCenter();
+            @include ir();
+            @include bgicon(14, 14, 18, 18, '/resources/images/icon/close.png');
+            display: block;
+        }
+
+        @include mq('deskTop'){
+            top: 46px;
+            right: 44px;
+        }
+    }
+
+    @include mq('deskTop'){
+        .frmwrap{
+            .frmdl{
+                & > dt{
+                    width: 140px;
+                }
+
+                & > dd{
+                    width: calc(100% - 150px);
+                }
+            }
+        }
+    }
+}
+
+.poptype1{
+    background-color: $white;
+    border: 1px solid $navy;
+    box-shadow: rgba($navy, 0.5) 0 0 4px;
+    width: (670/750)*100%;
+    max-width: 392px;
+    padding: 40px 30px;
+
+    .popclose{
+        top: 3px;
+        right: 3px;
+
+        span{
+            @include bgicon(14, 14, 18, 18, '/resources/images/icon/close.png');
+        }
+
+        @include mq('deskTop'){
+            top: 8px;
+            right: 8px;
+        }
+    }
+
+    @include mq('deskTop'){
+        padding: 50px 40px 45px;
+    }
+
+    &.poposition1{
+        position: absolute !important;
+        top: 135px;
+
+        @include mq('onlyMobile'){
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include mq('tablet'){
+            right: 20px;
+        }
+
+        @include mq('deskTop'){
+            top: 184px;
+            right: 40px;
+        }
+    }
+}
+
+.poptype2{
+    background-color: $white;
+    width: (720/750)*100%;
+    max-width: 1090px;
+    padding: 18px 20px 30px;
+
+    &.widmode1{
+        max-width: 720px;
+    }
+    &.widmode2{
+        max-width: 400px;
+    }
+
+    @include mq('deskTop'){
+        padding: 45px 49px 50px;
+    }
+}
+
+.popcontents{
+    position: relative;
+
+    .snshare{
+        @include clearfix();
+
+        & > li{
+            @include col(4);
+            float: left;
+
+            button{
+                @include marginCenter();
+                display: block;
+
+                p{
+                    @include marTop(16);
+                    @include fsm('15');
+                    color: $black;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.poptit1{
+    @include fsm('28');
+    color: $black;
+    border-bottom: 2px solid $black;
+    padding: 0 25px 15px 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+
+    @include mq('deskTop'){
+        padding: 0 40px 20px 0;
+        margin-bottom: 40px;
+        border-bottom-width: 4px;
+    }
+}
+
+.poptit2{
+    @include fsm('28');
+    color: $black;
+    border-bottom: 2px solid $black;
+    padding: 0 25px 10px 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    @include mq('deskTop'){
+        padding: 0 40px 12px 0;
+        margin-bottom: 20px;
+        border-bottom-width: 4px;
+    }
+}
+
+.popsnslogin{
+    @include marTop(30);
+
+    button{
+        @include fsm('18');
+        color: $white;
+        display: block;
+        width: 100%;
+        height: 55px;
+        padding: 0 20px;
+        margin-top: 10px;
+        font-weight: 500;
+        line-height: 55px;
+        text-align: left;
+
+        span{
+            @include disinBlock('m');
+        }
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+
+        .icon{
+            margin-right: 16px;
+            
+            i{
+                display: block;
+                width: 22px;
+                height: 21px;
+                background: url('/resources/images/icon/sns_login.png') no-repeat;
+                background-size: auto 21px;
+            }
+        }
+
+        &.btn_log1{
+            background-color: $blue;
+            .icon{
+                i{
+                    background-position: 0 0;
+                }
+            }
+        }
+        &.btn_log2{
+            background-color: #19ce60;
+            .icon{
+                i{
+                    background-position: -24px 0;
+                }
+            }
+        }
+        &.btn_log3{
+            color: $black;
+            background-color: #fae100;
+            .icon{
+                i{
+                    background-position: -48px 0;
+                }
+            }
+        }
+        &.btn_log4{
+            background-color: $black2;
+            .icon{
+                i{
+                    background-position: -72px 0;
+                }
+            }
+        }
+        &.btn_log5{
+            color: $black;
+            background-color: $bggray;
+            .icon{
+                i{
+                    background-position: -96px 0;
+                }
+            }
+        }
+
+        @include mq('deskTop'){
+            height: 60px;
+            line-height: 60px;
+        }
+    }
+}
