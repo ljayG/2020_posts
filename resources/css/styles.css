@@ -171,7 +171,7 @@ legend, .blind { position: absolute; left: -9999px; top: 0; height: 0; font-size
 
 .bgred { background-color: #F42643; }
 
-.bgyellow { background-color: #f19f01; }
+.bgyellow { background-color: #ffbf41; }
 
 .bgskyblue { background-color: #8fb7e6; }
 
@@ -285,6 +285,14 @@ img.maxw100 { max-width: 100%; }
 
 @media screen and (max-width: 767px) { .mgot5 { margin-top: 5px; } }
 
+@-webkit-keyframes movelr { 0% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  50% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+  100% { -webkit-transform: translateX(-10px); transform: translateX(-10px); } }
+
+@keyframes movelr { 0% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  50% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+  100% { -webkit-transform: translateX(-10px); transform: translateX(-10px); } }
+
 .isico { text-indent: -9999em; overflow: hidden; display: block; }
 
 .isico.isi_tel { width: 22px; height: 20px; background-image: url("../images/icon/tel.png"); background-repeat: no-repeat; background-size: contain; }
@@ -299,241 +307,9 @@ img.maxw100 { max-width: 100%; }
 
 @media screen and (min-width: 1024px) { .isico.isi_list { width: 14px; height: 14px; } }
 
-.isico.isi_dw1 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw1.png"); background-repeat: no-repeat; background-size: contain; }
+.isico.isi_hand { width: 24px; height: 26px; background-image: url("../images/icon/hand.png"); background-repeat: no-repeat; background-size: contain; }
 
-@media screen and (min-width: 1024px) { .isico.isi_dw1 { width: 24px; height: 27px; } }
-
-.isico.isi_dw2 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw2.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_dw2 { width: 24px; height: 27px; } }
-
-.isico.isi_dw3 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw3.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_dw3 { width: 24px; height: 27px; } }
-
-.isico.isi_dw4 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw4.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_dw4 { width: 24px; height: 27px; } }
-
-.isico.isi_dw5 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw5.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_dw5 { width: 24px; height: 27px; } }
-
-.isico.isi_dw6 { width: 17.5px; height: 20px; background-image: url("/resources/images/icon/dw6.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_dw6 { width: 24px; height: 27px; } }
-
-.isico.isi_bbsfirst { width: 13.5px; height: 16px; background-image: url("/resources/images/icon/bbs_first.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_bbsfirst { width: 13px; height: 14px; } }
-
-.isico.isi_bbsprev { width: 9px; height: 16px; background-image: url("/resources/images/icon/bbs_prev.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_bbsprev { width: 8px; height: 14px; } }
-
-.isico.isi_bbsnext { width: 9px; height: 16px; background-image: url("/resources/images/icon/bbs_next.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_bbsnext { width: 8px; height: 14px; } }
-
-.isico.isi_bbslast { width: 13.5px; height: 16px; background-image: url("/resources/images/icon/bbs_last.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_bbslast { width: 13px; height: 14px; } }
-
-.isico.isi_sns1 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns1.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns1 { width: 50px; height: 50px; } }
-
-.isico.isi_sns2 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns2.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns2 { width: 50px; height: 50px; } }
-
-.isico.isi_sns3 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns3.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns3 { width: 50px; height: 50px; } }
-
-.isico.isi_sns4 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns4.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns4 { width: 50px; height: 50px; } }
-
-.isico.isi_sns5 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns5.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns5 { width: 50px; height: 50px; } }
-
-.isico.isi_sns6 { width: 40px; height: 40px; background-image: url("/resources/images/icon/sns6.gif"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_sns6 { width: 50px; height: 50px; } }
-
-.isico.isi_search { width: 18px; height: 18px; background-image: url("/resources/images/icon/search2.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_search { width: 24px; height: 24px; } }
-
-.isico.isi_search3 { width: 18px; height: 18px; background-image: url("/resources/images/icon/search3.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_search3 { width: 24px; height: 24px; } }
-
-.isico.isi_tag { width: 18px; height: 18px; background-image: url("/resources/images/icon/tag.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_tag { width: 24px; height: 24px; } }
-
-.isico.isi_close { width: 15px; height: 15px; background-image: url("/resources/images/icon/close.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_close { width: 23px; height: 23px; } }
-
-.isico.isi_del { width: 20px; height: 20px; background-image: url("/resources/images/icon/del.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_del { width: 24px; height: 24px; } }
-
-.isico.isi_view { width: 19px; height: 12px; background-image: url("/resources/images/icon/view.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_view { width: 22px; height: 14px; } }
-
-.isico.isi_more { width: 14px; height: 14px; background-image: url("/resources/images/icon/more.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_more { width: 21px; height: 21px; } }
-
-.isico.isi_download { width: 14.5px; height: 16px; background-image: url("/resources/images/icon/download.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_download { width: 20px; height: 20px; } }
-
-.isico.isi_tel { width: 14px; height: 14px; background-image: url("/resources/images/icon/tel.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_tel { width: 18px; height: 18px; } }
-
-.isico.isi_blank { width: 16px; height: 16px; background-image: url("/resources/images/icon/blank.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_blank { width: 16px; height: 16px; } }
-
-.isico.isi_civil1 { width: 64px; height: 64px; background-image: url("/resources/images/icon/online_civil1.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_civil1 { width: 90px; height: 90px; } }
-
-.isico.isi_civil2 { width: 64px; height: 64px; background-image: url("/resources/images/icon/online_civil2.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_civil2 { width: 90px; height: 90px; } }
-
-.isico.isi_civil3 { width: 64px; height: 64px; background-image: url("/resources/images/icon/online_civil3.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_civil3 { width: 90px; height: 90px; } }
-
-.isico.mainico2_1 { width: 53px; height: 42px; background-image: url("/resources/images/main/msicon2_1.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.mainico2_1 { width: 90px; height: 72px; } }
-
-.isico.mainico2_2 { width: 53px; height: 42px; background-image: url("/resources/images/main/msicon2_2.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.mainico2_2 { width: 90px; height: 72px; } }
-
-.isico.mainico2_3 { width: 53px; height: 42px; background-image: url("/resources/images/main/msicon2_3.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.mainico2_3 { width: 90px; height: 72px; } }
-
-.isico.isi_road01 { width: 44px; height: 44px; background-image: url("/resources/images/icon/road01.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road01 { width: 70px; height: 70px; } }
-
-.isico.isi_road02 { width: 41px; height: 44px; background-image: url("/resources/images/icon/road02.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road02 { width: 66px; height: 71px; } }
-
-.isico.isi_road03 { width: 47px; height: 46px; background-image: url("/resources/images/icon/road03.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road03 { width: 79px; height: 78px; } }
-
-.isico.isi_road04 { width: 45px; height: 43px; background-image: url("/resources/images/icon/road04.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road04 { width: 75px; height: 72px; } }
-
-.isico.isi_road05 { width: 44px; height: 44px; background-image: url("/resources/images/icon/road05.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road05 { width: 74px; height: 74px; } }
-
-.isico.isi_road06 { width: 40px; height: 40px; background-image: url("/resources/images/icon/smg1.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road06 { width: 80px; height: 80px; } }
-
-.isico.isi_road07 { width: 40px; height: 40px; background-image: url("/resources/images/icon/smg2.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road07 { width: 80px; height: 80px; } }
-
-.isico.isi_road08 { width: 44px; height: 44px; background-image: url("/resources/images/icon/road06.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road08 { width: 74px; height: 74px; } }
-
-.isico.isi_road09 { width: 54px; height: 40px; background-image: url("/resources/images/icon/road07.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road09 { width: 91px; height: 68px; } }
-
-.isico.isi_road10 { width: 42px; height: 42px; background-image: url("/resources/images/icon/road08.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_road10 { width: 72px; height: 72px; } }
-
-.isico.isi_partici01 { width: 45px; height: 47px; background-image: url("/resources/images/icon/partici01.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici01 { width: 74px; height: 78px; } }
-
-.isico.isi_partici02 { width: 44px; height: 45px; background-image: url("/resources/images/icon/partici02.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici02 { width: 74px; height: 76px; } }
-
-.isico.isi_partici03 { width: 49px; height: 42px; background-image: url("/resources/images/icon/partici03.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici03 { width: 82px; height: 71px; } }
-
-.isico.isi_partici04 { width: 50px; height: 44px; background-image: url("/resources/images/icon/partici04.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici04 { width: 84px; height: 74px; } }
-
-.isico.isi_partici05 { width: 51px; height: 40px; background-image: url("/resources/images/icon/partici05.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici05 { width: 86px; height: 67px; } }
-
-.isico.isi_partici06 { width: 47px; height: 45px; background-image: url("/resources/images/icon/partici06.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici06 { width: 78px; height: 74px; } }
-
-.isico.isi_partici07 { width: 44px; height: 38px; background-image: url("/resources/images/icon/partici07.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici07 { width: 73px; height: 63px; } }
-
-.isico.isi_partici08 { width: 45px; height: 36px; background-image: url("/resources/images/icon/partici08.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici08 { width: 75px; height: 60px; } }
-
-.isico.isi_partici09 { width: 43px; height: 37px; background-image: url("/resources/images/icon/partici09.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici09 { width: 72px; height: 62px; } }
-
-.isico.isi_partici10 { width: 33px; height: 47px; background-image: url("/resources/images/icon/partici10.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici10 { width: 55px; height: 79px; } }
-
-.isico.isi_partici11 { width: 40px; height: 41px; background-image: url("/resources/images/icon/partici11.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici11 { width: 67px; height: 69px; } }
-
-.isico.isi_partici12 { width: 39px; height: 47px; background-image: url("/resources/images/icon/partici12.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici12 { width: 65px; height: 79px; } }
-
-.isico.isi_partici13 { width: 44px; height: 38px; background-image: url("/resources/images/icon/partici13.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici13 { width: 73px; height: 63px; } }
-
-.isico.isi_partici14 { width: 38px; height: 39px; background-image: url("/resources/images/icon/partici14.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici14 { width: 65px; height: 67px; } }
-
-.isico.isi_partici15 { width: 36px; height: 48px; background-image: url("/resources/images/icon/partici15.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici15 { width: 59px; height: 78px; } }
-
-.isico.isi_partici16 { width: 42px; height: 47px; background-image: url("/resources/images/icon/partici16.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici16 { width: 69px; height: 77px; } }
-
-.isico.isi_partici17 { width: 41px; height: 34px; background-image: url("/resources/images/icon/partici17.png"); background-repeat: no-repeat; background-size: contain; }
-
-@media screen and (min-width: 1024px) { .isico.isi_partici17 { width: 68px; height: 67px; } }
+@media screen and (min-width: 1024px) { .isico.isi_hand { width: 40px; height: 44px; } }
 
 .btnwrap::after { content: ''; display: block; float: none; clear: both; height: 0; font-size: 0; line-height: 0; visibility: hidden; }
 
@@ -882,8 +658,6 @@ img.maxw100 { max-width: 100%; }
   .agrwrap .argtxt { padding-right: 200px; }
   .agrwrap .chkfrm_space { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); right: 0; margin-top: 0; } }
 
-@media print and (color) { * { -webkit-print-color-adjust: exact; } }
-
 .header { background-color: #fff; border-bottom: 1px solid #e0e0e0; position: fixed; width: 100%; height: 105px; top: 0; left: 0; z-index: 10; }
 
 @media screen and (min-width: 1024px) { .header { height: 100px; } }
@@ -1178,15 +952,28 @@ img.maxw100 { max-width: 100%; }
 
 .displaybg { position: relative; height: calc(100vh - 105px); min-height: 500px; background-image: url("../images/poetry/background_m.jpg"); background-position: top center; background-size: cover; }
 
-.displaybg .noticebar { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); color: #fff; background-color: rgba(0, 91, 172, 0.95); width: 90.4%; max-width: 610px; padding: 10px; bottom: 0; border-radius: 5px 5px 0 0; text-align: center; }
+.displaybg .noticebar { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 1rem; color: #fff; background-color: rgba(0, 91, 172, 0.95); width: 90.4%; max-width: 610px; padding: 10px; bottom: 0; border-radius: 8px 8px 0 0; text-align: center; }
 
-@media screen and (min-width: 1024px) { .displaybg { height: calc(100vh - 100px); min-height: 680px; background-image: url("../images/poetry/background.jpg"); } }
+@media screen and (min-width: 1024px) { .displaybg .noticebar { font-size: 1.375rem; } }
 
-.disp_slider .item a { display: block; }
+.displaybg .noticebar span { display: inline-block; vertical-align: middle; }
+
+.displaybg .noticebar span + span { margin-left: 6px; }
+
+.displaybg .noticebar .hand { -webkit-animation: movelr 1.4s linear infinite; animation: movelr 1.4s linear infinite; }
+
+@media screen and (min-width: 1024px) { .displaybg { height: calc(100vh - 100px); min-height: 740px; background-image: url("../images/poetry/background.jpg"); }
+  .displaybg .noticebar { padding: 16px 10px; } }
+
+.disp_slider .item a { position: relative; display: block; }
 
 .disp_slider .item a img { width: auto; height: 405px; }
 
-@media screen and (min-width: 1024px) { .disp_slider .item a img { height: auto; } }
+.disp_slider .item a .more { display: none; }
+
+@media screen and (min-width: 1024px) { .disp_slider .item a img { height: auto; }
+  .disp_slider .item a .more { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; background: url("../images/icon/plus.png") #ffbf41 no-repeat center; position: absolute; display: block; width: 74px; height: 74px; bottom: 20px; left: 50%; margin-left: -37px; border-radius: 50%; -webkit-box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; opacity: 0; }
+  .disp_slider .item a:hover .more { opacity: 1; } }
 
 .bgsect { padding-top: 25px; padding-bottom: 30px; }
 
