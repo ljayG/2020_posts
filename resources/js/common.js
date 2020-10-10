@@ -33,6 +33,19 @@ $(document).ready(function() {
 		}, 500);
 	});
 
+	$('#displaySlide').owlCarousel({
+		margin: 10,
+		loop: false,
+		dots: false,
+		autoWidth: true,
+		items: 4,
+		center: true,
+		responsive: {
+			1024 : {
+				center: false,
+			}
+		}
+	});
 
 	$('#poetrySlider').slick({
 		arrows: false,
