@@ -26,6 +26,7 @@
         @include fsm('16');
         color: $black;
         border: 1px solid $igray;
+        display: none;
         margin-top: 12px;
         padding: 12px;
         font-weight: 500;
@@ -65,7 +66,6 @@
         }
 
         .cs{
-            display: none;
             position: absolute;
             top: 39px;
             right: 0;

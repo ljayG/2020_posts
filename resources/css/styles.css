@@ -1037,7 +1037,7 @@ img.maxw100 { max-width: 100%; }
 
 @media screen and (min-width: 1024px) { #footer .addr p { font-size: 1rem; } }
 
-#footer .cs { font-size: 0.813rem; color: #222; border: 1px solid #dfdfdf; margin-top: 12px; padding: 12px; font-weight: 500; text-align: center; }
+#footer .cs { font-size: 0.813rem; color: #222; border: 1px solid #dfdfdf; display: none; margin-top: 12px; padding: 12px; font-weight: 500; text-align: center; }
 
 @media screen and (min-width: 1024px) { #footer .cs { font-size: 1rem; } }
 
@@ -1053,7 +1053,7 @@ img.maxw100 { max-width: 100%; }
   #footer h6 { display: block; width: 172px; }
   #footer h6 img { width: 100%; }
   #footer .addr { position: absolute; top: 56px; left: 202px; }
-  #footer .cs { display: none; position: absolute; top: 39px; right: 0; margin-top: 0; } }
+  #footer .cs { position: absolute; top: 39px; right: 0; margin-top: 0; } }
 
 @media screen and (min-width: 1260px) { #footer .cs { width: 230px; padding: 20px; } }
 
@@ -1175,6 +1175,18 @@ img.maxw100 { max-width: 100%; }
   .poretry_slider .slick-prev:hover, .poretry_slider .slick-prev:focus { background-image: url("../images/common/slide_arrow.png"); }
   .poretry_slider .slick-next:hover, .poretry_slider .slick-next:focus { background-image: url("../images/common/slide_arrow.png"); background-position: right; }
   .poretry_slider .slick-dots { bottom: -40px; } }
+
+.displaybg { position: relative; height: calc(100vh - 105px); min-height: 500px; background-image: url("../images/poetry/background_m.jpg"); background-position: top center; background-size: cover; }
+
+.displaybg .noticebar { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); color: #fff; background-color: rgba(0, 91, 172, 0.95); width: 90.4%; max-width: 610px; padding: 10px; bottom: 0; border-radius: 5px 5px 0 0; text-align: center; }
+
+@media screen and (min-width: 1024px) { .displaybg { height: calc(100vh - 100px); min-height: 680px; background-image: url("../images/poetry/background.jpg"); } }
+
+.disp_slider .item a { display: block; }
+
+.disp_slider .item a img { width: auto; height: 405px; }
+
+@media screen and (min-width: 1024px) { .disp_slider .item a img { height: auto; } }
 
 .bgsect { padding-top: 25px; padding-bottom: 30px; }
 

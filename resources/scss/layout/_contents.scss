@@ -227,7 +227,56 @@
     }
 }
 
+.displaybg{
+    position: relative;
+    height: calc(100vh - 105px);
+    min-height: 500px;
+    background-image: url('../images/poetry/background_m.jpg');
+    background-position: top center;
+    background-size: cover;
 
+    .noticebar{
+        @include posiCenter('a');
+        @include fsm('24');
+        color: $white;
+        background-color: rgba($color-primary, 0.95);
+        width: (678/750)*100%;
+        max-width: 610px;
+        padding: 10px;
+        bottom: 0;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+    }
+
+    @include mq('deskTop'){
+        height: calc(100vh - 100px);
+        min-height: 680px;
+        background-image: url('../images/poetry/background.jpg'); 
+    }
+}
+
+.disp_slider{
+    .item{
+        a{
+            display: block;
+
+            img{
+                width: auto;
+                height: 405px;
+            }
+        }
+    }
+
+    @include mq('deskTop'){
+        .item{
+            a{
+                img{
+                    height: auto;
+                }
+            }
+        }
+    }
+}
 
 
 
