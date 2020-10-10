@@ -54,17 +54,62 @@
         <!-- contents Area(s) -->
         <main class="container">
             <div id="contents">
-				<div class="inner2"></div>
-				<div class="inner">
-					<div class="btnwrap">
-						<div class="center">
-							<a href="#" class="btn1 btnwhite">
-								<span><i class="isico isi_list"></i></span>
-								<span>목록</span>
-							</a>
+				<section>
+					<h3 class="poetry_tit">
+						<div class="title">나도 이제 알아</div>
+						<div class="name">추정순</div>
+					</h3>
+					<figure class="poetryimg">
+						<img src="../../resources/images/poetry/item/detail_001.jpg" alt="" class="maxw100">
+					</figure>
+					<section class="moviesect">
+						<div class="inner2">
+							<h4 class="title">수상작 관련 영상</h4>
+							<video controls playsinline preload="auto" width="100%" poster="">
+								<source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+						</video>
+						</div>
+					</section>
+					<div class="inner">
+						<section class="ant_poetry mgmb80">
+							<h4 class="sectit1">다른작품 보기</h4>
+							<div class="poretry_slider" id="poetrySlider">
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href="#"><img src="../../resources/images/poetry/item/detail_001.jpg" alt=""></a>
+								</div>
+							</div>
+						</section>
+						<div class="btnwrap mgmb50">
+							<div class="center">
+								<a href="list.html" class="btn1 btnwhite">
+									<span><i class="isico isi_list"></i></span>
+									<span>목록</span>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>
             </div>
         </main>
         <!--// contents Area(e) -->
@@ -93,6 +138,9 @@
 		TOP
 	</button>
     <!--// 상단바로가기 버튼 영역(e)-->
+	<script>
+		const initSlider = 1; // 현재페이지 번호 입력해주세요. 0~ 부터 시작
+	</script>
 	<script src="../../resources/js/common.js"></script>
 </body>
 </html>

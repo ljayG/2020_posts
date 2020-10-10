@@ -32,4 +32,25 @@ $(document).ready(function() {
 			scrollTop: 0
 		}, 500);
 	});
+
+
+	$('#poetrySlider').slick({
+		arrows: false,
+		dots: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		infinite: false,
+		mobileFirst: true,
+		// initialSlide: initSlider, // 현 강사 위치 슬라이드 처음으로 위치 0~부터 시작
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					arrows: true,
+					slidesToShow: 5,
+					slidesToScroll: 5,
+				}
+			},
+		]
+	});
 });
