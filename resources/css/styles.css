@@ -963,7 +963,7 @@ img.maxw100 { max-width: 100%; }
 .displaybg .noticebar .hand { -webkit-animation: movelr 1.4s linear infinite; animation: movelr 1.4s linear infinite; }
 
 @media screen and (min-width: 1024px) { .displaybg { height: calc(100vh - 100px); min-height: 740px; background-image: url("../images/poetry/background.jpg"); }
-  .displaybg .noticebar { padding: 16px 10px; } }
+  .displaybg .noticebar { padding: 20px 10px; } }
 
 .disp_slider .item a { position: relative; display: block; }
 
@@ -972,7 +972,7 @@ img.maxw100 { max-width: 100%; }
 .disp_slider .item a .more { display: none; }
 
 @media screen and (min-width: 1024px) { .disp_slider .item a img { height: auto; }
-  .disp_slider .item a .more { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; background: url("../images/icon/plus.png") #ffbf41 no-repeat center; position: absolute; display: block; width: 74px; height: 74px; bottom: 20px; left: 50%; margin-left: -37px; border-radius: 50%; -webkit-box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; opacity: 0; }
+  .disp_slider .item a .more { -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; background: url("../images/icon/plus.png") #ffbf41 no-repeat center; position: absolute; display: block; width: 74px; height: 74px; bottom: 8px; left: 50%; margin-left: -37px; border-radius: 50%; -webkit-box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; box-shadow: rgba(34, 34, 34, 0.3) 0 6px 10px; opacity: 0; }
   .disp_slider .item a:hover .more { opacity: 1; } }
 
 .bgsect { padding-top: 25px; padding-bottom: 30px; }
