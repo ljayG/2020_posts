@@ -43,8 +43,8 @@
 			</div>
             <nav class="gnb">
                 <div id="gnb">
-                    <div class="dep1"><a href="#"><span>문해교육 10년사</span></a></div>
-                    <div class="dep1 current"><a href="#"><span>시화전</span></a></div>
+                    <div class="dep1 current"><a href="#"><span>문해교육 10년사</span></a></div>
+                    <div class="dep1"><a href="#"><span>시화전</span></a></div>
                     <div class="dep1"><a href="#"><span>2/4행시</span></a></div>
                     <div class="dep1"><a href="#"><span>현장스케치</span></a></div>
                 </div>
@@ -54,13 +54,32 @@
         <!-- contents Area(s) -->
         <main class="container">
             <div id="contents">
-				<div class="ties">
-					<section>
-						<h3 class="poetry_tit">
-							<div class="title"></div>
-						</h3>
-					</section>
-				</div>
+				<section class="mainsector">
+					<div class="maininner">
+						<ul class="main_tabmenu">
+							<li class="tab active"><a href="#" data-controls="tab1"><span>함께한 10년</span></a></li>
+							<li class="tab"><a href="#" data-controls="tab2"><span>배움을 잇다</span></a></li>
+							<li class="tab"><a href="#" data-controls="tab3"><span>행복을 빗다</span></a></li>
+						</ul>
+						<div class="maincont tab_content">
+							<div class="tabpanel show" id="tab1">
+								<video controls playsinline preload="auto" width="100%" poster="">
+									<source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="tabpanel" id="tab2">
+								<video controls playsinline preload="auto" width="100%" poster="">
+									<source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="tabpanel" id="tab3">
+								<video controls playsinline preload="auto" width="100%" poster="">
+									<source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+								</video>
+							</div>
+						</div>
+					</div>
+				</section>
             </div>
         </main>
         <!--// contents Area(e) -->
@@ -89,6 +108,9 @@
 		TOP
 	</button>
     <!--// 상단바로가기 버튼 영역(e)-->
+	<script>
+		const initSlider = 1; // 현재페이지 번호 입력해주세요. 0~ 부터 시작
+	</script>
 	<script src="../../resources/js/common.js"></script>
 </body>
 </html>
