@@ -51,17 +51,17 @@ $(document).ready(function() {
 		arrows: false,
 		dots: true,
 		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		infinite: false,
 		mobileFirst: true,
-		// initialSlide: initSlider, // 현 강사 위치 슬라이드 처음으로 위치 0~부터 시작
+		initialSlide: initSlider, // 현 강사 위치 슬라이드 처음으로 위치 0~부터 시작
 		responsive: [
 			{
 				breakpoint: 1024,
 				settings: {
 					arrows: true,
 					slidesToShow: 5,
-					slidesToScroll: 5,
+					slidesToScroll: 1,
 				}
 			},
 		]
