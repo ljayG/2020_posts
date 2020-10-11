@@ -545,6 +545,10 @@ img.maxw100 { max-width: 100%; }
 
 @media screen and (min-width: 900px) { .inner2 { margin-left: auto; margin-right: auto; } }
 
+.inner3 { max-width: 810px; }
+
+@media screen and (min-width: 850px) { .inner3 { margin-left: auto; margin-right: auto; } }
+
 #contents { position: relative; padding-top: 105px; }
 
 @media screen and (min-width: 1024px) { #contents { padding-top: 100px; } }
@@ -675,6 +679,10 @@ img.maxw100 { max-width: 100%; }
   .poemlist > li img { -webkit-transition: all 1.4s ease-in-out; transition: all 1.4s ease-in-out; }
   .poemlist > li .poem { margin-left: auto; margin-right: auto; width: 94.92754%; }
   .poemlist > li:nth-of-type(3n+1) { clear: both; } }
+
+.sketchsector { position: relative; height: 149.73vw; padding: 26.4vw 18px 0; background-image: url("../images/sketch/background_m.jpg"); background-repeat: no-repeat; background-position: center top; background-size: cover; }
+
+@media screen and (min-width: 1024px) { .sketchsector { height: 989px; padding: 174px 0 0; background-image: url("../images/sketch/background.jpg"); } }
 
 .bgsect { padding-top: 25px; padding-bottom: 30px; }
 

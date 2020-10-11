@@ -16,6 +16,14 @@
     }
 }
 
+.inner3{
+    max-width: 810px;
+
+    @media screen and (min-width: 850px){
+        @include marginCenter();
+    }
+}
+
 #contents{
     position: relative;
     padding-top: 105px;
@@ -396,6 +404,22 @@
                 clear: both;
             }
         }
+    }
+}
+
+.sketchsector{
+    position: relative;
+    height: 149.73vw;
+    padding: 26.4vw 18px 0;
+    background-image: url('../images/sketch/background_m.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    @include mq('deskTop'){
+        height: 989px;
+        padding: 174px 0 0;
+        background-image: url('../images/sketch/background.jpg');
     }
 }
 
