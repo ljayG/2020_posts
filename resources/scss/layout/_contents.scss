@@ -416,9 +416,36 @@
     background-position: center top;
     background-size: cover;
 
+    .ps_download{
+        margin-top: 15px;
+        text-align: right;
+
+        a{
+            display: inline-block;
+            width: 120px;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
     @include mq('deskTop'){
         height: 989px;
         padding: 174px 0 0;
         background-image: url('../images/sketch/background.jpg');
+
+        .ps_download{
+            position: absolute;
+            top: 600px;
+            left: 50%;
+            margin: 0 0 0 420px;
+            text-align: left;
+
+            a{
+                display: block;
+                width: auto;
+            }
+        }
     }
 }
