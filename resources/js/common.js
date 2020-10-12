@@ -33,6 +33,22 @@ $(document).ready(function() {
 		}, 500);
 	});
 
+	// 탭메뉴
+    $(".main_tabmenu .tab > a").bind('click', function (e) {
+        e.preventDefault();
+
+        var $status = $(this).parent('li');
+        var $index = $(this).attr('data-controls');
+
+        if($status.hasClass('active') == false){
+            $(".main_tabmenu .tab").removeClass('active');
+            $status.addClass('active');
+        }
+
+        $(".tabpanel").removeClass('show');
+        $(".tabpanel#" + $index).addClass('show');
+    });
+
 	$('#displaySlide').owlCarousel({
 		margin: 10,
 		loop: false,
@@ -66,20 +82,4 @@ $(document).ready(function() {
 			},
 		]
 	});
-
-	// 탭메뉴
-    $(".main_tabmenu .tab > a").bind('click', function (e) {
-        e.preventDefault();
-
-        var $status = $(this).parent('li');
-        var $index = $(this).attr('data-controls');
-
-        if($status.hasClass('active') == false){
-            $(".main_tabmenu .tab").removeClass('active');
-            $status.addClass('active');
-        }
-
-        $(".tabpanel").removeClass('show');
-        $(".tabpanel#" + $index).addClass('show');
-    });
 });
