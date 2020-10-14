@@ -45,6 +45,7 @@ $(document).ready(function() {
             $status.addClass('active');
         }
 
+		$(".tabpanel video").trigger('pause');
         $(".tabpanel").removeClass('show');
         $(".tabpanel#" + $index).addClass('show');
     });
