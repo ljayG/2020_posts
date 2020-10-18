@@ -242,7 +242,7 @@
 
     @include mq('deskTop'){
         width: 918px;
-        margin: 541px auto 0;
+        margin: 410px auto 0;
 
         li{
             @include col(4);
